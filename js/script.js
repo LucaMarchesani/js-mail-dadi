@@ -12,15 +12,15 @@ si ma noi cosa vogliamo fare?
 torniamo a scrivere in italiano
 proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano"
 */
-const numbers = [];
+let numbers = [];
 const inputButton = document.getElementById('btn');
 console.log(inputButton);
 
 inputButton.addEventListener('click', function () {
     
-    const userRandomNumbers = Math.floor(Math.random() * 6);
+    const userRandomNumbers = Math.floor(Math.random() * 6) +1;
     numbers.push(userRandomNumbers);
-    const randomNumbers = Math.floor(Math.random() * 6);
+    const randomNumbers = Math.floor(Math.random() * 6) +1;
     numbers.push(randomNumbers);
 
     if (userRandomNumbers > randomNumbers){
@@ -30,5 +30,4 @@ inputButton.addEventListener('click', function () {
     else if (userRandomNumbers < randomNumbers){
         console.log('User Number: '+userRandomNumbers+' You Lose!!! '+'IA Number:'+randomNumbers);
     }
-
 })
